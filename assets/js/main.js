@@ -11,3 +11,8 @@ il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 const numberRandom=[];
 
+for(let i=0; i<5; i++){
+    numberRandom=Math.floor(Math.random()*100)
+    
+}
+
