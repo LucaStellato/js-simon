@@ -16,6 +16,7 @@ let formEl= document.getElementById('formEl')
 
 setInterval(()=>{
     numberEl.style.display= 'none'
+    formEl.style.display= 'block'
 },1000 );
 
 
@@ -31,6 +32,8 @@ setInterval(()=>{
 formEl.addEventListener('submit', (event) => {
     event.preventDefault();
    for(let i=0; i<result.length; i++){
-    
+    if(inputEl.value==result[i]){
+        console.log('hai indovinato')
+    }
    }
 })
