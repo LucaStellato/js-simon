@@ -11,7 +11,8 @@ il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 let numberRandom = [];
 let numberEl = document.getElementById('number')
-
+let inputEl= document.querySelectorAll('#inputTag  input')
+let formEl= document.getElementById('formEl')
 
 setInterval(()=>{
     numberEl.style.display= 'none'
@@ -27,5 +28,9 @@ setInterval(()=>{
     }
 
     
-
-
+formEl.addEventListener('submit', (event) => {
+    event.preventDefault();
+   for(let i=0; i<result.length; i++){
+    
+   }
+})
