@@ -17,7 +17,7 @@ let formEl= document.getElementById('formEl')
 setInterval(()=>{
     numberEl.style.display= 'none'
     formEl.style.display= 'block'
-},30000 );
+},3000 );
 
 
     let result = [];
@@ -31,12 +31,16 @@ setInterval(()=>{
     
 formEl.addEventListener('submit', (event) => {
     event.preventDefault();
-   for(let i=0; i<result.length; i++){
-    if(inputEl[0].value==result[i] && inputEl[1].value==result[i] && inputEl[2].value==result[i] && inputEl[3].value==result[i] && inputEl[4].value==result[i] ){
+    console.log(result)
+    console.log(inputEl)
+    console.log(result.includes(inputEl[0].value), result.includes(Number(inputEl[0].value)))
+   
+    if(result.includes(Number(inputEl[0].value)) && result.includes(Number(inputEl[1].value))  && result.includes(Number(inputEl[2].value))   && result.includes(Number(inputEl[3].value))   && result.includes(Number(inputEl[4].value))  )
+        {
         console.log('hai indovinato')
     }else{
         console.log('hai sbagliato ritenta')
     }
-   }
+   
  console.log(inputEl[0].value,inputEl[1].value, inputEl[2].value , inputEl[3].value, inputEl[4].value)
 })
