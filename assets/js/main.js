@@ -11,10 +11,15 @@ il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 let numberRandom=[];
 let numberEl=document.getElementById('number')
+let result=[];
 
 for(let i=0; i<5; i++){
-    numberRandom=Math.floor(Math.random()*100)
-    console.log(numberRandom)
-    
+   numberRandom=Math.floor(Math.random()*100)
+     result.push(numberRandom);
+    console.log(result)
+ numberEl.innerHTML= `<p>i numeri sono ${result}</p>`
 }
+ 
+   
+    
 
