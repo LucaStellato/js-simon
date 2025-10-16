@@ -15,7 +15,7 @@ let numberEl = document.getElementById('number')
 
 setInterval(()=>{
     numberEl.style.display= 'none'
-},30000 );
+},1000 );
 
 
     let result = [];
@@ -25,5 +25,7 @@ setInterval(()=>{
     console.log(result)
     numberEl.innerHTML = `<p>i numeri sono ${result}</p>`
     }
+
+    
 
 
