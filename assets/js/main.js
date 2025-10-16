@@ -1,14 +1,5 @@
 console.log('it work')
 
-
-
-/*Visualizzare in pagina 5 numeri casuali. Da lì parte un timer di 30 secondi.
-Dopo 30 secondi i numeri scompaiono e appaiono invece 5 input
- in cui l'utente deve inserire i numeri che ha visto precedentemente, 
- nell'ordine che preferisce.
-Dopo che sono stati inseriti i 5 numeri, 
-il software dice quanti e quali dei numeri da indovinare sono stati individuati.*/
-
 let numberRandom = [];
 let numberEl = document.getElementById('number')
 let inputEl= document.querySelectorAll('#inputTag  input')
@@ -33,13 +24,13 @@ formEl.addEventListener('submit', (event) => {
     event.preventDefault();
     console.log(result)
     console.log(inputEl)
-    console.log(result.includes(inputEl[0].value), result.includes(Number(inputEl[0].value)))
-   
+          let answerEl= document.getElementById('answer')
     if(result.includes(Number(inputEl[0].value)) && result.includes(Number(inputEl[1].value))  && result.includes(Number(inputEl[2].value))   && result.includes(Number(inputEl[3].value))   && result.includes(Number(inputEl[4].value))  )
         {
-        console.log('hai indovinato')
+
+       answerEl.innerHTML= 'COMPLIMENTI HAI VINTO'
     }else{
-        console.log('hai sbagliato ritenta')
+        answerEl.innerHTML= 'PECCATO HAI PERSO'
     }
    
  console.log(inputEl[0].value,inputEl[1].value, inputEl[2].value , inputEl[3].value, inputEl[4].value)
