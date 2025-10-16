@@ -9,11 +9,12 @@ Dopo 30 secondi i numeri scompaiono e appaiono invece 5 input
 Dopo che sono stati inseriti i 5 numeri, 
 il software dice quanti e quali dei numeri da indovinare sono stati individuati.*/
 
-const numberRandom=[];
+let numberRandom=[];
 let numberEl=document.getElementById('number')
 
 for(let i=0; i<5; i++){
     numberRandom=Math.floor(Math.random()*100)
+    console.log(numberRandom)
     
 }
 
